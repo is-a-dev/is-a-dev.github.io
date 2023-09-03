@@ -1,16 +1,16 @@
 @font-face { 
         font-family: 'Ubuntu Mono Regular';
-        src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/UbuntuMono/UbuntuMono-Regular.ttf);
+        src: url(fonts/UbuntuMono/UbuntuMono-Regular.ttf);
 }
 @font-face { 
         font-family: 'Ubuntu Mono Italic';
-        src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/UbuntuMono/UbuntuMono-Italic.ttf);
+        src: url(fonts/UbuntuMono/UbuntuMono-Italic.ttf);
 }
 @font-face { 
         font-family: 'Ubuntu Mono Bold';
-        src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/UbuntuMono/UbuntuMono-Bold.ttf);
+        src: url(fonts/UbuntuMono/UbuntuMono-Bold.ttf);
 }
 @font-face { 
         font-family: 'Ubuntu Mono Bold Italic';
-        src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/UbuntuMono/UbuntuMono-BoldItalic.ttf);
+        src: url(fonts/UbuntuMono/UbuntuMono-BoldItalic.ttf);
 }
