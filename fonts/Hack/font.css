@@ -1,20 +1,20 @@
 @font-face { 
         font-family: 'Hack Regular';
-        src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/Hack/Hack-Regular.ttf);
+        src: url(fonts/Hack/Hack-Regular.ttf);
 }
 @font-face { 
         font-family: 'Hack Italic';
-        src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/Hack/Hack-Italic.ttf);
+        src: url(fonts/Hack/Hack-Italic.ttf);
 }
 @font-face { 
         font-family: 'Hack Bold';
-        src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/Hack/Hack-Bold.ttf);
+        src: url(fonts/Hack/Hack-Bold.ttf);
 }
 @font-face { 
         font-family: 'Hack Bold Italic';
-        src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/Hack/Hack-BoldItalic.ttf);
+        src: url(fonts/Hack/Hack-BoldItalic.ttf);
 }
 @font-face {
 	font-family: 'Hack';
-	src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/Hack/Hack-Regular.ttf);
+	src: url(fonts/Hack/Hack-Regular.ttf);
 }
