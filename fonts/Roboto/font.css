@@ -1,48 +1,48 @@
 @font-face {
 	font-family: 'Roboto Regular';
-	src: url(/fonts/Roboto/Roboto-Regular.ttf);
+	src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/Roboto/Roboto-Regular.ttf);
 }
 @font-face { 
         font-family: 'Roboto Medium';
-        src: url(/fonts/Roboto/Roboto-Medium.ttf);
+        src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/Roboto/Roboto-Medium.ttf);
 }
 @font-face { 
         font-family: 'Roboto Thin';
-        src: url(/fonts/Roboto/Roboto-Thin.ttf);
+        src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/Roboto/Roboto-Thin.ttf);
 }
 @font-face { 
         font-family: 'Roboto Light';
-        src: url(/fonts/Roboto/Roboto-Light.ttf);
+        src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/Roboto/Roboto-Light.ttf);
 }
 @font-face { 
         font-family: 'Roboto Bold';
-        src: url(/fonts/Roboto/Roboto-Bold.ttf);
+        src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/Roboto/Roboto-Bold.ttf);
 }
 @font-face { 
         font-family: 'Roboto Black';
-        src: url(/fonts/Roboto/Roboto-Black.ttf);
+        src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/Roboto/Roboto-Black.ttf);
 }
 @font-face { 
         font-family: 'Roboto Regular Italic';
-        src: url(/fonts/Roboto/Roboto-RegularItalic.ttf);
+        src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/Roboto/Roboto-RegularItalic.ttf);
 }
 @font-face { 
         font-family: 'Roboto Medium Italic';
-        src: url(/fonts/Roboto/Roboto-MediumItalic.ttf);
+        src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/Roboto/Roboto-MediumItalic.ttf);
 }
 @font-face { 
         font-family: 'Roboto Thin Italic';
-        src: url(/fonts/Roboto/Roboto-ThinItalic.ttf);
+        src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/Roboto/Roboto-ThinItalic.ttf);
 }
 @font-face { 
         font-family: 'Roboto Light Italic';
-        src: url(/fonts/Roboto/Roboto-LightItalic.ttf);
+        src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/Roboto/Roboto-LightItalic.ttf);
 }
 @font-face { 
         font-family: 'Roboto Bold Italic';
-        src: url(/fonts/Roboto/Roboto-BoldItalic.ttf);
+        src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/Roboto/Roboto-BoldItalic.ttf);
 }
 @font-face { 
         font-family: 'Roboto Black Italic';
-        src: url(/fonts/Roboto/Roboto-BlackItalic.ttf);
+        src: url(https://raw.githubusercontent.com/TheRedXD/is-a-dev.github.io/patch-1/fonts/Roboto/Roboto-BlackItalic.ttf);
 }
