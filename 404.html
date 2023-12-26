@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <title>404 - Page Not Found</title>
-    <!-- Your CSS styles -->
     <style>
-        /* Your styles from the original code */
-        html,
-        body {
+        html {
             --header-bg: #0f0c19;
             --accent: #4e3aA3;
             --body-fg: #9b7dff;
@@ -24,14 +22,19 @@
             padding: 20px;
         }
 
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0f0c19;
+            color: var(--body-fg);
+            overflow: hidden; /* Hides the scrollbar for the body */
+        }
+
         body * {
             box-sizing: border-box;
             line-height: 1.5em;
         }
 
-        /* ... (rest of your styles) ... */
-
-        /* Additional styles for 404 page */
         .error-container {
             display: flex;
             justify-content: center;
