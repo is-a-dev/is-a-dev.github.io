@@ -1,7 +1,4 @@
-# is-a-dev.github.io
-[is-a.dev](https://www.is-a.dev) website
+# is-a.dev Website
 
-To register your `is-a.dev` subdomain, go to the [registration repository](https://github.com/is-a-dev/register).
-
-
+## Credits
 Website designed by: [@TheRedXD](https://github.com/TheRedXD)
