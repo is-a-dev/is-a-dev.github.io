@@ -1,252 +1,237 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>is-a.dev | Free sub-domains for developers</title>
-        <meta name="description" content="A service to allow developers to get free `.is-a.dev` subdomains" />
-        <meta property="og:title" content="is-a.dev" />
-        <meta property="og:description" content="A service to allow developers to get free `.is-a.dev` subdomains" />
-        <meta property="og:image" content="/assets/is-a.dev.png" />
-        <meta property="og:url" content="https://is-a.dev" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="is-a.dev" />
-        <meta name="twitter:description" content="A service to allow developers to get free `.is-a.dev` subdomains" />
-        <meta name="twitter:image" content="/assets/is-a.dev.png" />
-        <meta name="apple-mobile-web-app-title" content="is-a.dev" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="theme-color" content="#4E3AA3" />
-        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-        <link rel="stylesheet" href="./fonts/Roboto/font.css" />
-        <link rel="stylesheet" href="./fonts/UbuntuMono/font.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-        <style>
-            html,
-            body {
-                --header-bg: #0f0c19;
-                --accent: #4e3aa3;
-                --body-fg: #9b7dff;
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>is-a.dev | Free sub-domains for developers</title>
+  <meta name="description" content="A service to allow developers to get free `.is-a.dev` subdomains" />
+  <meta property="og:title" content="is-a.dev" />
+  <meta property="og:description" content="A service to allow developers to get free `.is-a.dev` subdomains" />
+  <meta property="og:image" content="/assets/is-a.dev.png" />
+  <meta property="og:url" content="https://is-a.dev" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="is-a.dev" />
+  <meta name="twitter:description" content="A service to allow developers to get free `.is-a.dev` subdomains" />
+  <meta name="twitter:image" content="/assets/is-a.dev.png" />
+  <meta name="apple-mobile-web-app-title" content="is-a.dev" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#4E3AA3" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  <link rel="stylesheet" href="./fonts/Roboto/font.css" />
+  <link rel="stylesheet" href="./fonts/UbuntuMono/font.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <style>
+    html,
+    body {
+      --header-bg: #0f0c19;
+      --accent: #4e3aa3;
+      --body-fg: #9b7dff;
+      margin: 0;
+      padding: 0;
+      background-color: #0f0c19;
+      color: var(--body-fg);
+      font-family: "Roboto Regular", sans-serif;
+      padding: 20px;
+      box-sizing: border-box;
+      line-height: 1.5em;
+    }
 
-                margin: 0;
-                padding: 0;
-                background-color: #0f0c19;
-                color: var(--body-fg);
+    main>p {
+      font-family: "Ubuntu Mono Regular";
+    }
 
-                font-family: "Roboto Regular", sans-serif;
-                padding: 20px;
-            }
+    a:hover {
+      opacity: 0.8;
+    }
 
-            body * {
-                box-sizing: border-box;
-                line-height: 1.5em;
-            }
+    /* scrollbar for chrome users (firefox by default uses their own scrollbar lol) */
+    ::-webkit-scrollbar {
+      width: 20px;
+    }
 
-            main > p {
-                font-family: "Ubuntu Mono Regular";
-            }
+    ::-webkit-scrollbar-button {
+      width: 0;
+      height: 0;
+    }
 
-            a:hover {
-                opacity: 0.8;
-            }
+    ::-webkit-scrollbar-track {
+      background: #0f0c19;
+    }
 
-            /* scrollbar for chrome users (firefox by default uses their own scrollbar lol) */
-            ::-webkit-scrollbar {
-                width: 20px;
-            }
+    ::-webkit-scrollbar-thumb {
+      background: #9b7dff;
+      border: 6px solid #0f0c19;
+      border-radius: 10px;
+      transition: all 0.2s ease-in-out;
+    }
 
-            ::-webkit-scrollbar-button {
-                width: 0;
-                height: 0;
-            }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #7041ff;
+    }
 
-            ::-webkit-scrollbar-track {
-                background: #0f0c19;
-            }
+    /* text selection */
+    ::-moz-selection {
+      color: black;
+      background: #9b7dff;
+    }
 
-            ::-webkit-scrollbar-thumb {
-                background: #9b7dff;
-                border: 6px solid #0f0c19;
-                border-radius: 10px;
-                transition: all 0.2s ease-in-out;
-            }
+    ::selection {
+      color: black;
+      background: #9b7dff;
+    }
 
-            ::-webkit-scrollbar-thumb:hover {
-                background: #7041ff;
-            }
-        </style>
-    </head>
+    .domain img {
+      border-radius: 20px;
+      display: block;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      outline: 1px solid transparent;
+    }
 
-    <body>
-        <style>
-            header {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                background-color: var(--header-bg);
-                color: white;
-            }
+    .domain img:hover {
+      outline: 1px solid #9b7dff;
+    }
 
-            .domain img {
-                border-radius: 20px;
-                display: block;
-                transition: all 0.2s ease-in-out;
-                cursor: pointer;
-                outline: 1px solid transparent;
-            }
+    .domain a {
+      border-radius: 20px;
+    }
 
-            .domain img:hover {
-                outline: 1px solid #9b7dff;
-            }
+    main {
+      padding: 1em;
+      margin: 1em auto;
+      max-width: 1000px;
+    }
 
-            .domain a {
-                border-radius: 20px;
-            }
-        </style>
-        <header>
-            <div class="domain">
-                <a href="https://github.com/is-a-dev" target="_blank"
-                    ><img
-                        src="https://raw.githubusercontent.com/is-a-dev/register/main/media/banner.png"
-                        style="max-width: 1000px; width: 100%; display: block"
-                /></a>
-            </div>
-        </header>
+    main p {
+      padding-left: 10px;
+      border-left: 1px solid #9b7dff;
+      border-radius: 5px;
+    }
 
-        <style>
-            main {
-                padding: 1em;
-                margin: 1em auto;
-                max-width: 1000px;
-            }
+    main p img {
+      border-radius: 10px;
+      margin-top: 7px;
+      margin-right: 10px;
+      transition: all 0.2s ease-in-out;
+      outline: 1px solid transparent;
+    }
 
-            main p {
-                padding-left: 10px;
-                border-left: 1px solid #9b7dff;
-                border-radius: 5px;
-            }
+    main p img:hover {
+      opacity: 0.8;
+      outline: 1px solid white;
+    }
 
-            main p img {
-                border-radius: 10px;
-                margin-top: 7px;
-                margin-right: 10px;
-                transition: all 0.2s ease-in-out;
-                outline: 1px solid transparent;
-            }
+    main p img:last-child {
+      margin-right: 0;
+    }
 
-            main p img:hover {
-                opacity: 0.8;
-                outline: 1px solid white;
-            }
+    main p span {
+      color: #ffffff;
+      background-color: #7041ff;
+      padding: 2px 5px;
+      border-radius: 5px;
+      line-height: 1;
+    }
 
-            main p img:last-child {
-                margin-right: 0;
-            }
+    h1 {
+      font-size: 2em;
+      margin: 0;
+      border-bottom: 4px solid #9b7dff;
+      border-radius: 5px;
+      background-color: #9b7dff20;
+      padding: 20px;
+      padding-bottom: 17px;
+    }
 
-            main p span {
-                color: #ffffff;
-                background-color: #7041ff;
-                padding: 2px 5px;
-                border-radius: 5px;
-                line-height: 1;
-            }
+    h1 p {
+      border: none;
+      font-size: 12pt;
+      color: #bdb7cf;
+      padding: 0;
+      margin: 0;
+    }
 
-            h1 {
-                font-size: 2em;
-                margin: 0;
-                border-bottom: 4px solid #9b7dff;
-                border-radius: 5px;
-                background-color: #9b7dff20;
-                padding: 20px;
-                padding-bottom: 17px;
-            }
+    a {
+      color: #ddd2ff;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+    }
 
-            h1 p {
-                border: none;
-                font-size: 12pt;
-                color: #bdb7cf;
-                padding: 0;
-                margin: 0;
-            }
+    a:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
 
-            a {
-                color: #ddd2ff;
-                text-decoration: none;
-                transition: all 0.2s ease-in-out;
-            }
+<body>
+  <header>
+    <div class="domain">
+      <a href="https://github.com/is-a-dev" target="_blank"><img
+          src="https://raw.githubusercontent.com/is-a-dev/register/main/media/banner.png"
+          style="max-width: 1000px; width: 100%; display: block"></a>
+    </div>
+  </header>
+  <main>
+    <h1>
+      is-a.dev
+      <p>Welcome! 👋</p>
+    </h1>
+    <p>
+      <span>is-a.dev</span> is a service that allows developers to get a sweet-looking <span
+        style="display: inline-block; width: fit-content; line-height: 1">.is-a.dev</span> subdomain for their personal
+      websites.
+      <br>
+      To register your own subdomain, go to the <u><a href="https://github.com/is-a-dev/register"
+          target="_blank">is-a.dev registration repository</a></u> and follow the instructions.
+    </p>
+    <h2>Report abuse</h2>
+    <p>
+      If you believe one of the subdomains is abusing the service, please <u><a
+          href="https://github.com/is-a-dev/register/issues/new?labels=report-abuse&template=report-abuse.md&title=Report+abuse"
+          target="_blank">report</a></u> it.
+    </p>
+    <h2>Donations</h2>
+    <p>
+      This project is a free service for developers and will stay that way. Please consider <u><a
+          href="https://www.buymeacoffee.com/phenax">donating</a></u> to help me keep this running forever!
+    </p>
+    <p>
+      <a href="https://www.buymeacoffee.com/app/phenax"><img
+          src="https://img.buymeacoffee.com/button-api/?text=Buy me a Coffee&slug=phenax&button_colour=000000&font_colour=ffffff&font_family=Cookie&outline_colour=ffffff&coffee_colour=FFDD00"
+          height="30"></a>
 
-            a:hover {
-                opacity: 0.8;
-            }
+      <a href="https://liberapay.com/phenax" target="_blank"><img
+          src="https://img.shields.io/badge/donate_on-liberapay-black.svg?style=for-the-badge"
+          alt="Liberapay recurring donation button"></a>
+    </p>
+    <h2>Show Support</h2>
+    <p>
+      If you want to spread this project to more developers, star our repository on GitHub or share it with others!
+    </p>
+    <p>
+      <a href="https://github.com/is-a-dev/register" target="_blank">
+        <img src="https://img.shields.io/badge/Star_On-Github-black.svg?style=for-the-badge" alt="Star On Github">
+      </a>
+      <img src="https://img.shields.io/badge/Copy_Link_To-Repository-black.svg?style=for-the-badge"
+        alt="Copy Link To Repository" onclick="copyLink()">
+    </p>
+  </main>
+  <script>
+    function copyLink() {
+      var textToCopy = "https://github.com/is-a-dev/register";
+      navigator.clipboard.writeText(textToCopy)
+        .then(() => {
+          alert("Link copied to clipboard!");
+        })
+        .catch(err => {
+          console.error('Failed to copy: ', err);
+        });
+    }
+  </script>
+</body>
 
-            .socials {
-                display: block;
-                position: absolute;
-                top: 0;
-                right: 0;
-                margin: 10px;
-            }
-
-            .social {
-                padding: 10px;
-                font-size: 16pt;
-            }
-        </style>
-        <main>
-            <div class="socials">
-                <div class="social">
-                    <a href="https://github.com/is-a-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
-                </div>
-            </div>
-            <h1>
-                is-a.dev
-                <p>Welcome! 👋</p>
-            </h1>
-            <p>
-                <span>is-a.dev</span> is a service that allows developers to get a sweet-looking
-                <span style="display: inline-block; width: fit-content; line-height: 1">.is-a.dev</span> subdomain for
-                their personal websites.
-                <br />
-                To register your own subdomain, go to the
-                <a href="https://github.com/is-a-dev/register" target="_blank">is-a.dev registration repository</a> and
-                follow the instructions.
-            </p>
-
-            <h2>Report abuse</h2>
-            <p>
-                If you believe one of the subdomains is abusing the service, please
-                <a
-                    href="https://github.com/is-a-dev/register/issues/new?labels=report-abuse&template=report-abuse.md&title=Report+abuse"
-                    target="_blank"
-                    >report</a
-                >
-                it.
-            </p>
-
-            <h2>Donations</h2>
-            <p>
-                This project is a free service for developers and will stay that way. Please consider
-                <a href="https://www.buymeacoffee.com/phenax">donating</a> to help me keep this running forever!
-            </p>
-
-            <p>
-                <a href="https://www.buymeacoffee.com/phenax" target="_blank"
-                    ><img
-                        src="https://cdn.buymeacoffee.com/buttons/default-orange.png"
-                        alt="Buy Me A Coffee"
-                        height="28"
-                        width="119"
-                /></a>
-                <a href="https://liberapay.com/phenax" target="_blank"
-                    ><img
-                        src="https://img.shields.io/badge/liberapay-donate-yellow.svg?style=for-the-badge"
-                        alt="Liberapay recurring donation button"
-                /></a>
-            </p>
-        </main>
-    </body>
 </html>
