@@ -1,249 +1,101 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        <!-- HTML Meta Tags -->
-        <title>is-a.dev -Free subdomains for developers</title>
-        <meta name="description" content="A service to allow developers to get free `.is-a.dev` subdomains" />
-        <meta name="theme-color" content="#4E3AA3" />
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        <!-- Google / Search Engine Tags -->
-        <meta itemprop="name" content="is-a.dev" />
-        <meta itemprop="description" content="A service to allow developers to get free `.is-a.dev` subdomains" />
-        <meta itemprop="image" content="https://is-a.dev/assets/is-a.dev.png" />
+    <!-- HTML Meta Tags -->
+    <title>is-a.dev -Free subdomains for developers</title>
+    <meta name="description" content="A service to allow developers to get free `.is-a.dev` subdomains" />
+    <meta name="theme-color" content="#4E3AA3" />
 
-        <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="https://is-a.dev/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="is-a.dev" />
-        <meta property="og:description" content="A service to allow developers to get free `.is-a.dev` subdomains" />
-        <meta property="og:image" content="https://is-a.dev/assets/is-a.dev.png" />
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="is-a.dev" />
+    <meta itemprop="description" content="A service to allow developers to get free `.is-a.dev` subdomains" />
+    <meta itemprop="image" content="https://is-a.dev/assets/logo.png" />
 
-        <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="is-a.dev" />
-        <meta name="twitter:description" content="A service to allow developers to get free `.is-a.dev` subdomains" />
-        <meta name="twitter:image" content="https://is-a.dev/assets/is-a.dev.png" />
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://is-a.dev/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="is-a.dev" />
+    <meta property="og:description" content="A service to allow developers to get free `.is-a.dev` subdomains" />
+    <meta property="og:image" content="https://is-a.dev/assets/logo.png" />
 
-        <!-- Apple Meta Tags -->
-        <meta name="apple-mobile-web-app-title" content="is-a.dev" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="is-a.dev" />
+    <meta name="twitter:description" content="A service to allow developers to get free `.is-a.dev` subdomains" />
+    <meta name="twitter:image" content="https://is-a.dev/assets/logo.png" />
 
-        <!-- Favicon -->
-        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <!-- Apple Meta Tags -->
+    <meta name="apple-mobile-web-app-title" content="is-a.dev" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="./fonts/Roboto/font.css" />
-        <link rel="stylesheet" href="./fonts/UbuntuMono/font.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    </head>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
 
-    <style>
-        html,
-        body {
-            --header-bg: #0f0c19;
-            --accent: #4e3aa3;
-            --body-fg: #9b7dff;
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="https://cdn.hrsn.net/is-a-dev/website/fonts/Roboto/font.css" />
+    <link rel="stylesheet" href="https://cdn.hrsn.net/is-a-dev/website/fonts/UbuntuMono/font.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
 
-            margin: 0;
-            padding: 0;
-            background-color: #0f0c19;
-            color: var(--body-fg);
+<body>
+    <header>
+        <div class="domain">
+            <a href="https://github.com/is-a-dev" target="_blank"><img
+                    src="https://raw.githubusercontent.com/is-a-dev/register/main/media/banner.png"
+                    style="max-width: 1000px; width: 100%; display: block" /></a>
+        </div>
+    </header>
 
-            font-family: "Roboto Regular", sans-serif;
-            padding: 20px;
-        }
-
-        body * {
-            box-sizing: border-box;
-            line-height: 1.5em;
-        }
-
-        main > p {
-            font-family: "Ubuntu Mono Regular";
-        }
-
-        a:hover {
-            opacity: 0.8;
-        }
-
-        /* scrollbar for chrome users (firefox by default uses their own scrollbar lol) */
-        ::-webkit-scrollbar {
-            width: 20px;
-        }
-
-        ::-webkit-scrollbar-button {
-            width: 0;
-            height: 0;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #0f0c19;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #9b7dff;
-            border: 6px solid #0f0c19;
-            border-radius: 10px;
-            transition: all 0.2s ease-in-out;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #7041ff;
-        }
-    </style>
-
-    <body>
-        <style>
-            header {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                background-color: var(--header-bg);
-                color: white;
-            }
-
-            .domain img {
-                border-radius: 20px;
-                display: block;
-                transition: all 0.2s ease-in-out;
-                cursor: pointer;
-                outline: 1px solid transparent;
-            }
-
-            .domain img:hover {
-                outline: 1px solid #9b7dff;
-            }
-
-            .domain a {
-                border-radius: 20px;
-            }
-        </style>
-
-        <header>
-            <div class="domain">
-                <a href="https://github.com/is-a-dev" target="_blank"><img src="https://raw.githubusercontent.com/is-a-dev/register/main/media/banner.png" style="max-width: 1000px; width: 100%; display: block" /></a>
+    <main>
+        <div class="socials">
+            <div class="social">
+                <a href="https://github.com/is-a-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
             </div>
-        </header>
+        </div>
+        <h1>
+            is-a.dev
+            <p>Welcome! 👋</p>
+        </h1>
+        <p>
+            <span>is-a.dev</span> is a service that allows developers to get a sweet-looking <span
+                style="display: inline-block; width: fit-content; line-height: 1">.is-a.dev</span> subdomain for their
+            personal websites.
+            <br />
+            To register your own subdomain, go to the
+            <a href="https://github.com/is-a-dev/register" target="_blank">is-a-dev/register</a> repository on GitHub
+            and follow the instructions.
+        </p>
 
-        <style>
-            main {
-                padding: 1em;
-                margin: 1em auto;
-                max-width: 1000px;
-            }
+        <h2>Report abuse</h2>
+        <p>
+            If you believe one of the subdomains is abusing the service, please
+            <a href="https://github.com/is-a-dev/register/issues/new?labels=report-abuse&template=report-abuse.md&title=Report+abuse"
+                target="_blank">report</a>
+            it.
+        </p>
 
-            main p {
-                padding-left: 10px;
-                border-left: 1px solid #9b7dff;
-                border-radius: 5px;
-            }
+        <h2>Donations</h2>
+        <p>
+            This project is a free service for developers and will stay that way. Please consider
+            <a href="https://www.buymeacoffee.com/phenax">donating</a> to help me keep this running forever!
+        </p>
 
-            main p img {
-                border-radius: 10px;
-                margin-top: 7px;
-                margin-right: 10px;
-                transition: all 0.2s ease-in-out;
-                outline: 1px solid transparent;
-            }
+        <p>
+            <a href="https://www.buymeacoffee.com/phenax" target="_blank"><img
+                    src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="28"
+                    width="119" /></a>
+            <a href="https://liberapay.com/phenax" target="_blank"><img
+                    src="https://img.shields.io/badge/liberapay-donate-yellow.svg?style=for-the-badge"
+                    alt="Liberapay recurring donation button" /></a>
+        </p>
+    </main>
+</body>
 
-            main p img:hover {
-                opacity: 0.8;
-                outline: 1px solid white;
-            }
-
-            main p img:last-child {
-                margin-right: 0;
-            }
-
-            main p span {
-                color: #ffffff;
-                background-color: #7041ff;
-                padding: 2px 5px;
-                border-radius: 5px;
-                line-height: 1;
-            }
-
-            h1 {
-                font-size: 2em;
-                margin: 0;
-                border-bottom: 4px solid #9b7dff;
-                border-radius: 5px;
-                background-color: #9b7dff20;
-                padding: 20px;
-                padding-bottom: 17px;
-            }
-
-            h1 p {
-                border: none;
-                font-size: 12pt;
-                color: #bdb7cf;
-                padding: 0;
-                margin: 0;
-            }
-
-            a {
-                color: #ddd2ff;
-                text-decoration: none;
-                transition: all 0.2s ease-in-out;
-            }
-
-            a:hover {
-                opacity: 0.8;
-            }
-
-            .socials {
-                display: block;
-                position: absolute;
-                top: 0;
-                right: 0;
-                margin: 10px;
-            }
-
-            .social {
-                padding: 10px;
-                font-size: 16pt;
-            }
-        </style>
-        <main>
-            <div class="socials">
-                <div class="social">
-                    <a href="https://github.com/is-a-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
-                </div>
-            </div>
-            <h1>
-                is-a.dev
-                <p>Welcome! 👋</p>
-            </h1>
-            <p>
-                <span>is-a.dev</span> is a service that allows developers to get a sweet-looking <span style="display: inline-block; width: fit-content; line-height: 1">.is-a.dev</span> subdomain for their personal websites.
-                <br />
-                To register your own subdomain, go to the
-                <a href="https://github.com/is-a-dev/register" target="_blank">is-a-dev/register</a> repository on GitHub and follow the instructions.
-            </p>
-
-            <h2>Report abuse</h2>
-            <p>
-                If you believe one of the subdomains is abusing the service, please
-                <a href="https://github.com/is-a-dev/register/issues/new?labels=report-abuse&template=report-abuse.md&title=Report+abuse" target="_blank">report</a>
-                it.
-            </p>
-
-            <h2>Donations</h2>
-            <p>
-                This project is a free service for developers and will stay that way. Please consider
-                <a href="https://www.buymeacoffee.com/phenax">donating</a> to help me keep this running forever!
-            </p>
-
-            <p>
-                <a href="https://www.buymeacoffee.com/phenax" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="28" width="119" /></a>
-                <a href="https://liberapay.com/phenax" target="_blank"><img src="https://img.shields.io/badge/liberapay-donate-yellow.svg?style=for-the-badge" alt="Liberapay recurring donation button" /></a>
-            </p>
-        </main>
-    </body>
 </html>

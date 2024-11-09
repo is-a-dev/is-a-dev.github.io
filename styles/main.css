@@ -1,0 +1,155 @@
+html,
+body {
+    --header-bg: #0f0c19;
+    --accent: #4e3aa3;
+    --body-fg: #9b7dff;
+
+    margin: 0;
+    padding: 0;
+    background-color: #0f0c19;
+    color: var(--body-fg);
+
+    font-family: "Roboto Regular", sans-serif;
+    padding: 20px;
+}
+
+body * {
+    box-sizing: border-box;
+    line-height: 1.5em;
+}
+
+main > p {
+    font-family: "Ubuntu Mono Regular";
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* Scrollbar for Chrome users */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f0c19;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9b7dff;
+    border: 6px solid #0f0c19;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7041ff;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--header-bg);
+    color: white;
+}
+
+.domain img {
+    border-radius: 20px;
+    display: block;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    outline: 1px solid transparent;
+}
+
+.domain img:hover {
+    outline: 1px solid #9b7dff;
+}
+
+.domain a {
+    border-radius: 20px;
+}
+
+main {
+    padding: 1em;
+    margin: 1em auto;
+    max-width: 1000px;
+}
+
+main p {
+    padding-left: 10px;
+    border-left: 1px solid #9b7dff;
+    border-radius: 5px;
+}
+
+main p img {
+    border-radius: 10px;
+    margin-top: 7px;
+    margin-right: 10px;
+    transition: all 0.2s ease-in-out;
+    outline: 1px solid transparent;
+}
+
+main p img:hover {
+    opacity: 0.8;
+    outline: 1px solid white;
+}
+
+main p img:last-child {
+    margin-right: 0;
+}
+
+main p span {
+    color: #ffffff;
+    background-color: #7041ff;
+    padding: 2px 5px;
+    border-radius: 5px;
+    line-height: 1;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+    border-bottom: 4px solid #9b7dff;
+    border-radius: 5px;
+    background-color: #9b7dff20;
+    padding: 20px;
+    padding-bottom: 17px;
+}
+
+h1 p {
+    border: none;
+    font-size: 12pt;
+    color: #bdb7cf;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: #ddd2ff;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.socials {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.social {
+    padding: 10px;
+    font-size: 16pt;
+}
