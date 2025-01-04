@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        
+        <!-- Security Headers -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https:; script-src 'self' https:; style-src 'self' https:;">
+        <meta http-equiv="X-Content-Type-Options" content="nosniff">
+        
+        <!-- Preconnect to External Resources -->
+        <link rel="preconnect" href="https://cdn.hrsn.net">
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+        
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://is-a.dev/" />
 
         <!-- HTML Meta Tags -->
         <title>is-a.dev - Free subdomains for developers</title>
-        <meta name="description" content="A service to allow developers to get free `.is-a.dev` subdomains" />
+        <meta name="description" content="A service to allow developers to get free .is-a.dev subdomains" />
         <meta name="theme-color" content="#4E3AA3" />
 
-        <!-- Google / Search Engine Tags -->
-        <meta itemprop="name" content="is-a.dev" />
-        <meta itemprop="description" content="A service to allow developers to get free `.is-a.dev` subdomains" />
-        <meta itemprop="image" content="https://is-a.dev/assets/logo.png" />
-
-        <!-- Facebook Meta Tags -->
+        <!-- Social Media Tags -->
         <meta property="og:url" content="https://is-a.dev/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="is-a.dev" />
-        <meta property="og:description" content="A service to allow developers to get free `.is-a.dev` subdomains" />
+        <meta property="og:title" content="is-a.dev - Free Developer Subdomains" />
+        <meta property="og:description" content="A service to allow developers to get free .is-a.dev subdomains" />
         <meta property="og:image" content="https://is-a.dev/assets/logo.png" />
-
-        <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="is-a.dev" />
-        <meta name="twitter:description" content="A service to allow developers to get free `.is-a.dev` subdomains" />
-        <meta name="twitter:image" content="https://is-a.dev/assets/logo.png" />
 
         <!-- Apple Meta Tags -->
         <meta name="apple-mobile-web-app-title" content="is-a.dev" />
@@ -35,69 +36,147 @@
 
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="apple-touch-icon" href="assets/logo.png" />
 
         <!-- Stylesheets -->
         <link rel="stylesheet" href="styles/main.css" />
-        <link rel="stylesheet" href="https://cdn.hrsn.net/is-a-dev/website/fonts/Roboto/font.css" />
-        <link rel="stylesheet" href="https://cdn.hrsn.net/is-a-dev/website/fonts/UbuntuMono/font.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdn.hrsn.net/is-a-dev/website/fonts/Roboto/font.css" media="print" onload="this.media='all'" />
+        <link rel="stylesheet" href="https://cdn.hrsn.net/is-a-dev/website/fonts/UbuntuMono/font.css" media="print" onload="this.media='all'" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" media="print" onload="this.media='all'" />
 
-        <!-- Scripts -->
-        <script defer data-domain="is-a.dev" src="https://analytics.hrsn.net/js/script.js"></script>
+        <!-- Carbon Ads Style -->
+        <style>
+            #carbonads .carbon-poweredby {
+                color: #ffffff;
+            }
+        </style>
+
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "is-a.dev",
+            "description": "Free subdomains for developers",
+            "url": "https://is-a.dev"
+        }
+        </script>
     </head>
 
     <body>
-        <header>
-            <div class="domain">
-                <a href="https://github.com/is-a-dev" target="_blank"><img
-                        src="https://raw.githubusercontent.com/is-a-dev/register/main/media/banner.png"
-                        style="max-width: 1000px; width: 100%; display: block" /></a>
-            </div>
-        </header>
-
-        <main>
-            <div class="socials">
-                <div class="social">
-                    <a href="https://github.com/is-a-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <div class="page-wrapper">
+            <header role="banner">
+                <nav class="top-nav">
+                    <div class="nav-content">
+                        <a href="/" class="logo">is-a.dev</a>
+                        <div class="nav-links">
+                            <a href="https://github.com/is-a-dev" target="_blank" rel="noopener" class="github-button">
+                                <i class="fa-brands fa-github"></i>
+                                <span>View on GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="hero">
+                    <div class="hero-content">
+                        <h1>Get your free developer domain</h1>
+                        <p class="hero-description">Launch your developer portfolio or project with a professional <span class="highlight">.is-a.dev</span> subdomain</p>
+                        <div class="cta-buttons">
+                            <a href="https://github.com/is-a-dev/register" target="_blank" rel="noopener" class="primary-button">
+                                <i class="fa-solid fa-code-branch"></i>
+                                Register Your Domain
+                            </a>
+                            <a href="https://docs.is-a.dev" class="secondary-button">
+                                <i class="fa-solid fa-heart"></i>
+                                Documentation
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://raw.githubusercontent.com/is-a-dev/register/main/media/banner.png"
+                             alt="is-a.dev banner"
+                             class="banner-image" />
+                    </div>
                 </div>
-            </div>
+            </header>
 
-            <h1>
-                is-a.dev
-                <p>Welcome! 👋</p>
-            </h1>
+            <main role="main">
+                <section class="features">
+                    <div class="feature-card">
+                        <i class="fa-solid fa-rocket feature-icon"></i>
+                        <h3>Quick Setup</h3>
+                        <p>Get your subdomain up and running in minutes with our simple GitHub-based registration process.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-infinity feature-icon"></i>
+                        <h3>Forever Free</h3>
+                        <p>No hidden costs or subscription fees. Your developer subdomain stays free forever.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-shield-halved feature-icon"></i>
+                        <h3>Secure & Reliable</h3>
+                        <p>Built on robust infrastructure with SSL support and protection against abuse.</p>
+                    </div>
+                </section>
 
-            <p>
-                <span>is-a.dev</span> is a service that allows developers to get a sweet-looking <span
-                    style="display: inline-block; width: fit-content; line-height: 1">.is-a.dev</span> subdomain for their
-                personal websites.
-                <br />
-                To register your own subdomain, go to the
-                <a href="https://github.com/is-a-dev/register" target="_blank">is-a-dev/register</a> repository on GitHub
-                and follow the instructions.
-            </p>
+                <section class="how-it-works">
+                    <h2>How It Works</h2>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <h4>Fork Repository</h4>
+                            <p>Fork the is-a-dev/register repository on GitHub</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <h4>Add Your Domain</h4>
+                            <p>Create a new JSON file with your subdomain details</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <h4>Submit PR</h4>
+                            <p>Create a pull request and wait for approval</p>
+                        </div>
+                    </div>
+                </section>
 
-            <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CW7DE2JU&placement=is-adev&format=cover" id="_carbonads_js"></script>
+                <div id="carbon-wrapper">
+                    <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CW7DE2JU&placement=is-adev&format=cover" id="_carbonads_js"></script>
+                </div>
 
-            <h2>Report abuse</h2>
-            <p>
-                If you believe one of the subdomains is abusing the service, please
-                <a href="https://github.com/is-a-dev/register/issues/new?labels=report-abuse&template=report-abuse.md&title=Report+abuse"
-                    target="_blank">report</a>
-                it.
-            </p>
+                <section class="support-section">
+                    <div class="support-card abuse">
+                        <h2>Report Abuse</h2>
+                        <p>Help us maintain a safe environment. Report any misuse of our subdomains.</p>
+                        <a href="https://github.com/is-a-dev/register/issues/new?labels=report-abuse&template=report-abuse.md&title=Report+abuse"
+                            target="_blank" rel="noopener" class="text-button">
+                            <i class="fa-solid fa-flag"></i>
+                            Submit Report
+                        </a>
+                    </div>
+                    <div class="support-card donate">
+                        <h2>Support Us</h2>
+                        <p>Help us keep this service free forever by contributing to our hosting costs.</p>
+                        <a href="https://donate.is-a.dev" class="text-button">
+                            <i class="fa-solid fa-heart"></i>
+                            Make a Donation
+                        </a>
+                    </div>
+                </section>
+            </main>
 
-            <h2>Donations</h2>
-            <p>
-                This project is a free service for developers and will stay that way. Please consider
-                <a href="https://donate.is-a.dev">donating</a> to help us keep this service running forever!
-            </p>
-        </main>
+            <footer>
+                <div class="footer-content">
+                    <p>Made with 💜 by <b>is-a.dev</b> team</p>
+                    <div class="social-links">
+                        <a href="https://github.com/is-a-dev" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- Analytics -->
+        <script defer data-domain="is-a.dev" src="https://analytics.hrsn.net/js/script.js"></script>
     </body>
-
-    <style>
-        #carbonads .carbon-poweredby {
-            color: #ffffff;
-        }
-    </style>
 </html>
