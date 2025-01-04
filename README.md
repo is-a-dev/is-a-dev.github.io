@@ -1,5 +1,8 @@
 # is-a.dev Website
-The website for the is-a.dev subdomain service.
+The official website for the is-a.dev free subdomain service for developers.
 
 ## Credits
-Website designed by [@TheRedXD](https://github.com/TheRedXD)
+Current website designed and developed by [@DevMatei](https://github.com/DevMatei)
+
+Previous website design by [@TheRedXD](https://github.com/TheRedXD)
+

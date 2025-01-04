@@ -168,7 +168,7 @@
             <footer>
                 <div class="footer-content">
                     <p>Made with 💜 by <b>is-a.dev</b> team</p>
-                    <p>&copy; 2025 is-a.dev. All rights reserved.</p>
+                    <p class="copyright">&copy; 2020-2025 is-a.dev. All rights reserved.</p>
                     <div class="social-links">
                         <a href="https://github.com/is-a-dev" target="_blank" rel="noopener" aria-label="GitHub">
                             <i class="fa-brands fa-github"></i>
@@ -179,5 +179,11 @@
         </div>
         <!-- Analytics -->
         <script defer data-domain="is-a.dev" src="https://analytics.hrsn.net/js/script.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const year = new Date().getFullYear();
+                document.querySelector('.copyright').innerHTML = `&copy; 2020-${year} is-a.dev. All rights reserved.`;
+            });
+        </script>
     </body>
 </html>
