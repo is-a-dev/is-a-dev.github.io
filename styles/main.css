@@ -1,21 +1,22 @@
 html,
 body {
-    --header-bg: #0f0c19;
-    --accent: #4e3aa3;
-    --body-fg: #9b7dff;
+    --header-bg: linear-gradient(90deg, #1a1331, #4e3aa3);
+    --accent: #7041ff;
+    --body-fg: #d1c4ff;
+    --hover-bg: #4e3aa3;
+    --hover-accent: #9b7dff;
 
     margin: 0;
     padding: 0;
     background-color: #0f0c19;
     color: var(--body-fg);
-
     font-family: "Roboto Regular", sans-serif;
+    line-height: 1.6;
     padding: 20px;
 }
 
 body * {
     box-sizing: border-box;
-    line-height: 1.5em;
 }
 
 main > p {
@@ -23,17 +24,16 @@ main > p {
 }
 
 a:hover {
-    opacity: 0.8;
+    color: var(--hover-accent);
+    background-color: var(--hover-bg);
+    border-radius: 5px;
+    padding: 0 5px;
+    transition: 0.3s ease-in-out;
 }
 
-/* Scrollbar for Chrome users */
+/* Scrollbar */
 ::-webkit-scrollbar {
-    width: 20px;
-}
-
-::-webkit-scrollbar-button {
-    width: 0;
-    height: 0;
+    width: 12px;
 }
 
 ::-webkit-scrollbar-track {
@@ -41,115 +41,89 @@ a:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #9b7dff;
-    border: 6px solid #0f0c19;
-    border-radius: 10px;
-    transition: all 0.2s ease-in-out;
+    background: var(--accent);
+    border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #7041ff;
-}
-
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--header-bg);
-    color: white;
-}
-
-.domain img {
-    border-radius: 20px;
-    display: block;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-    outline: 1px solid transparent;
-}
-
-.domain img:hover {
-    outline: 1px solid #9b7dff;
-}
-
-.domain a {
-    border-radius: 20px;
+    background: var(--hover-accent);
 }
 
 main {
-    padding: 1em;
+    padding: 2em;
     margin: 1em auto;
-    max-width: 1000px;
-}
-
-main p {
-    padding-left: 10px;
-    border-left: 1px solid #9b7dff;
-    border-radius: 5px;
-}
-
-main p img {
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
-    margin-top: 7px;
-    margin-right: 10px;
-    transition: all 0.2s ease-in-out;
-    outline: 1px solid transparent;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-main p img:hover {
-    opacity: 0.8;
-    outline: 1px solid white;
+/* Banner */
+main .banner {
+    font-size: 2.5rem;
+    color: var(--body-fg);
+    text-align: center;
+    background: var(--header-bg);
+    padding: 4px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-main p img:last-child {
-    margin-right: 0;
+main .banner img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
 }
 
-main span {
-    color: #ffffff;
-    background-color: #7041ff;
-    padding: 2px 5px;
+/* Paragraphs */
+main p {
+    padding-left: 15px;
+    border-left: 3px solid var(--accent);
     border-radius: 5px;
-    line-height: 1;
+    margin-bottom: 1em;
 }
 
+/* Headings */
 h1 {
-    font-size: 2em;
-    margin: 0;
-    border-bottom: 4px solid #9b7dff;
+    font-size: 2.5rem;
+    color: var(--body-fg);
+    text-align: center;
+    background: var(--header-bg);
+    padding: 15px;
     border-radius: 5px;
-    background-color: #9b7dff20;
-    padding: 20px;
-    padding-bottom: 17px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-h1 p {
-    border: none;
-    font-size: 12pt;
-    color: #bdb7cf;
-    padding: 0;
-    margin: 0;
+h2 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 5px;
 }
 
+/* Links */
 a {
-    color: #ddd2ff;
+    color: var(--accent);
     text-decoration: none;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 a:hover {
-    opacity: 0.8;
+    text-decoration: underline;
+    color: var(--accent); /* Ensures the color remains the same */
+    background-color: transparent; /* No background change */
 }
 
-.socials {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 10px;
+/* Carbon Ads */
+#carbonads {
+    padding-top: 20px;
 }
 
-.social {
-    padding: 10px;
-    font-size: 16pt;
+#carbonads .carbon-poweredby {
+    color: #ffffff;
 }
