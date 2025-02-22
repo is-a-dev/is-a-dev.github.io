@@ -62,10 +62,13 @@
 
             <h2>Check SubDomain Availability</h2>
             <div class="search-cntnr">
-                <input type="text" placeholder="Check domain name e.g. william">
-            <div class="search-btn">
+                <input id="subdomain" type="text" placeholder="Check domain name e.g. william">
+            <div class="search-btn" onclick="{check()}">
                 Check
             </div>
+            </div>
+            <div class="search-result-cntnr">
+                <p>Perfect! The subdomain is not yet available, <a href="https://docs.is-a.dev">read more here</a> to register this subdomain!</p>
             </div>
 
             <h2>Important Links</h2>
@@ -96,5 +99,23 @@
                 A project by <a href="https://wdh.gg">William Harrison</a>.
             </p>
         </main>
+        <script>
+            function check(){
+                fetch('https://raw.githubusercontent.com/is-a-dev/register/main/domains/'+document.getElementById('subdomain').value.trim().replace(' ','-').toLowerCase()+'.json')
+                .then(response => {
+                if (!response.ok) {
+                    throw new Error("HTTP error " + response.status);
+                }
+                return response.json();
+                })
+                .then(json => {
+                    // this.users = json;
+                    console.log(json);
+                })
+                .catch(function () {
+                    this.dataError = true;
+                })
+            }
+        </script>
     </body>
 </html>
