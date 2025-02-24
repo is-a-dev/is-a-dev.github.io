@@ -62,20 +62,20 @@
 
             <h2>Check SubDomain Availability</h2>
             <div class="search-cntnr">
-                <input id="search-domain" type="text" placeholder="Check domain name e.g. william">
+                <input id="search-domain" type="text" onkeyup="check()" placeholder="Check domain name e.g. william">
             <div id="search-btn" class="search-btn" onclick="check()">
                 Check
             </div>
             </div>
             <div class="search-result-cntnr">
-                <div id="result-card" class="hiddens result-card" style="width:100%;margin:4px;padding:8px">
-                        <div style="display:flex; align-items:center;justify-content:start;gap:1rem;width:100%">
-                            <img id="user-avatar" alt="user-avatar" src="http://github.com/wdhdev.png?size=64">
+                <div id="result-card" class="hiddens result-card">
+                        <div class="user-infos">
+                            <img id="user-avatar" class="user-avatar" alt="user-avatar" src="http://github.com/wdhdev.png?size=64">
                             <div style="display:flex;flex-direction:column;width:100%">
                                 <a id="user-gh-link" href="htttps://github.com/wdhdev">
                                     <h2 id="user-name" style="line-height:1rem">William</h2>
                                 </a>
-                                <a id="user-website-link" href="https://william.is-a.dev" style="margin-top:-1.5rem;font-size:1.2rem">william.is-a.dev</a>
+                                <a id="user-website-link" href="https://william.is-a.dev" style="margin-top:-1.3rem;font-size:1rem">william.is-a.dev</a>
                             </div>
                         </div>
                         <p id="user-info">Simple Website</p>

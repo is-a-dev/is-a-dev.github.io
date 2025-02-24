@@ -121,7 +121,7 @@ a:hover {
 }
 
 /* Search */
-input{
+input {
     font-family: "Ubuntu Mono Regular";
     width: 100%;
     color: var(--body-fg);
@@ -131,54 +131,66 @@ input{
     border-bottom-right-radius: 0;
     border-width: 5px;
     border-image: var(--card-border);
-    background-color:#0f0c19;
-    /* background-image: linear-gradient(#0f0c19, #0f0c19); */
+    background-color: #0f0c19
 }
 
-input:focus{
-outline-style: none;
+input:focus {
+    outline-style: none
 }
 
-input::placeholder{
-    color: var(--body-fg);
+input::placeholder {
+    color: var(--body-fg)
 }
 
-.search-cntnr{
+.search-cntnr {
     font-family: "Ubuntu Mono Regular";
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
-    padding: 4px;
+    align-self: center;
+    padding: 4px
 }
-.search-btn{
+
+.search-btn {
     cursor: pointer;
     padding-right: 16px;
     font-weight: 400;
     font-size: 1rem;
-    padding-left: 24px;
+    padding-left: 8px;
     background-color: var(--hover-bg);
     align-items: center;
     align-content: center;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    /* make unselectable text */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    user-select: none
 }
 
-.result-card{
-    padding: 1rem;
-    border: double 1em transparent;
-    border-style: solid;
-    border-image: var(--card-border);
+.result-card {
+    padding: 0.5rem;
+    border: 5px solid #0000;
+    background: conic-gradient(#0f0c19 0 0) padding-box,linear-gradient(90deg,#1a1331,#4e3aa3) border-box;
     border-style: solid;
     border-width: 4px;
-    border-radius: 1rem;
-    background-clip: padding-box, border-box;
-    background-origin: border-box;
+    border-radius: 4px;
+    margin-top: 1rem
+}
+
+.user-infos {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: .5rem;
+    width: 100%
+}
+
+.user-avatar {
+    border-radius: 50%;
+    background-color: var(--hover-accent);
+    width: 64px
 }
 
 .hidden{
