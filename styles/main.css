@@ -157,6 +157,10 @@ input::placeholder{
     user-select: none;
 }
 
+.hidden{
+    display: none;
+}
+
 /* Carbon Ads */
 #carbonads {
     padding-top: 20px;
