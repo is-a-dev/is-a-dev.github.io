@@ -62,27 +62,26 @@
 
             <h2>Check SubDomain Availability</h2>
             <div class="search-cntnr">
-                <input id="subdomain" type="text" placeholder="Check domain name e.g. william">
-            <div class="search-btn" onclick="{check()}">
+                <input id="search-domain" type="text" placeholder="Check domain name e.g. william">
+            <div id="search-btn" class="search-btn" onclick="check()">
                 Check
             </div>
             </div>
             <div class="search-result-cntnr">
-		<div hidden id="bg-card" style="width:100%;margin:4-x;padding:8px">
-    			<div style="border-radius;display:flex; align-items:center;justify-content:start;gap:1rem;width:100%">
-        			<img id="avatar" alt="user-avatar" src="http://github.com/STICKnoLOGIC.png?size=64">
-        			<div style="display:flex;flex-direction:column;width:100%">
-        				<a id="user-gh-link" href="htttps://facebook.com">
-            				<h2 id="user-name" style="line-height:1rem">AERIAL</h2>
-        				</a>
-        				<a id="user-website-name" href="https://google/com" style="line-height:0	;margin:0">
-						<span id="user-website-link" style="font-size:1.2rem">sticknologic.is-a.dev</span>
-					</a>
-        			</div>
-    			</div>
-    			<p id="user-info">STICK NOLOGIC</p>
-		</div>
-                <p>Perfect! The subdomain is not yet available, <a href="https://docs.is-a.dev">read more here</a> to register this subdomain!</p>
+                <div id="result-card" class="hiddens" style="width:100%;margin:4-x;padding:8px">
+                        <div style="display:flex; align-items:center;justify-content:start;gap:1rem;width:100%">
+                            <img id="user-avatar" alt="user-avatar" src="http://github.com/wdhdev.png?size=64">
+                            <div style="display:flex;flex-direction:column;width:100%">
+                                <a id="user-gh-link" href="htttps://github.com/wdhdev">
+                                    <h2 id="user-name" style="line-height:1rem">William</h2>
+                                </a>
+                                <a id="user-website-link" href="https://william.is-a.dev" style="margin-top:-1.5rem;font-size:1.2rem">william.is-a.dev</a>
+                            </div>
+                        </div>
+                        <p id="user-info">Simple Website</p>
+                </div>
+                <p id="result-none" class="hidden">Nice! The subdomain is still available, <a href="https://docs.is-a.dev">read more here</a> to register the subdomain!</p>
+                <p id="result-error" class="hidden">An Error Occurred while checking the subdomain, please try again...</p>
             </div>
 
             <h2>Important Links</h2>
@@ -114,21 +113,63 @@
             </p>
         </main>
         <script>
+            let is_searching=false;
+            // result containers
+            const result_card=document.getElementById('result-card');
+            const result_none=document.getElementById('result-none');
+            const result_error=document.getElementById('result-error');
+            // user propagate
+            const user_avatar=document.getElementById('user-avatar');
+            const user_gh_link=document.getElementById('user-gh-link');
+            const user_name=document.getElementById('user-name');
+            const user_website_link=document.getElementById('user-website-link');
+            const user_info=document.getElementById('user-info');
+            
             function check(){
-                fetch('https://raw.githubusercontent.com/is-a-dev/register/main/domains/'+document.getElementById('subdomain').value.trim().replace(' ','-').toLowerCase()+'.json')
+                var search=document.getElementById('search-domain').value.trim().replace(' ','-').toLowerCase()
+                if(search ==='' || is_searching) return;
+                is_searching=true;
+                fetch('https://raw.githubusercontent.com/is-a-dev/register/main/domains/'+search+'.json')
                 .then(response => {
-                if (!response.ok) {
-                    throw new Error("HTTP error " + response.status);
-                }
-                return response.json();
+                    hide_results();
+                    if(!response.ok && response.status !== 404)
+                        throw new Error('Something went wrong');
+                    return !response.ok? null :
+                                        response.json();
                 })
                 .then(json => {
-                    // this.users = json;
-                    console.log(json);
+                    if(json!=null)
+                    {
+                        json.search=search;
+                        propagate_result(json);
+                    }
+                    else if (result_none.classList.contains('hidden')) 
+                        result_none.classList.toggle('hidden');
                 })
-                .catch(function () {
-                    this.dataError = true;
+                .catch(()=>{
+                    print(1111);
+                    if (result_error.classList.contains('hidden')) result_error.classList.toggle('hidden');
+                }).finally(()=>{
+                    is_searching=false;
                 })
+            }
+
+            function propagate_result(data){
+                if (result_card.classList.contains('hidden')) result_card.classList.toggle('hidden');
+                var gh_link='https://github.com/'+data.owner.username;
+                var website_link=data.search+'.is-a.dev';
+                user_avatar.src=gh_link+'.png?size=64';
+                user_gh_link.href=gh_link;
+                user_name.innerHTML=data.owner.username;
+                user_website_link.href='https://'+website_link;
+                user_website_link.innerHTML=website_link;
+                    user_info.textContent=data.description===undefined?'':data.description;
+            }
+
+            function hide_results(){
+                if (!result_card.classList.contains('hidden')) result_card.classList.toggle('hidden');
+                if (!result_none.classList.contains('hidden')) result_none.classList.toggle('hidden');
+                if (!result_error.classList.contains('hidden')) result_error.classList.toggle('hidden');
             }
         </script>
     </body>
