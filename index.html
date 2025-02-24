@@ -68,7 +68,7 @@
             </div>
             </div>
             <div class="search-result-cntnr">
-                <div id="result-card" class="hiddens" style="width:100%;margin:4-x;padding:8px">
+                <div id="result-card" class="hiddens result-card" style="width:100%;margin:4px;padding:8px">
                         <div style="display:flex; align-items:center;justify-content:start;gap:1rem;width:100%">
                             <img id="user-avatar" alt="user-avatar" src="http://github.com/wdhdev.png?size=64">
                             <div style="display:flex;flex-direction:column;width:100%">
@@ -147,7 +147,6 @@
                         result_none.classList.toggle('hidden');
                 })
                 .catch(()=>{
-                    print(1111);
                     if (result_error.classList.contains('hidden')) result_error.classList.toggle('hidden');
                 }).finally(()=>{
                     is_searching=false;
