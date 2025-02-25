@@ -126,12 +126,13 @@ input {
     width: 100%;
     color: var(--body-fg);
     font-size: 1.2rem;
-    padding: 4px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-width: 5px;
-    border-image: var(--card-border);
-    background-color: #0f0c19
+    padding: 8px;
+    border-width: 1px;
+    border-radius: 4px;
+    border: 5px solid #0000;
+    /* background-color: #0f0c19 */
+    background: conic-gradient(#0f0c19 0 0) padding-box,linear-gradient(90deg,#1a1331,#4e3aa3) border-box;
+
 }
 
 input:focus {
@@ -145,20 +146,16 @@ input::placeholder {
 .search-cntnr {
     font-family: "Ubuntu Mono Regular";
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: stretch;
     align-self: center;
-    padding: 4px
 }
 
-.search-btn {
-    cursor: pointer;
-    padding-right: 16px;
-    font-weight: 400;
+.search-tip {
     font-size: 1rem;
     padding-left: 8px;
-    background-color: var(--hover-bg);
+    font-style: italic;
     align-items: center;
     align-content: center;
     border-top-right-radius: 8px;
@@ -195,6 +192,13 @@ input::placeholder {
 
 .hidden{
     display: none;
+}
+
+/* adjust body padding when using mobile devices */
+@media (max-width: 480px) {
+    body{
+        padding: 0;
+    }
 }
 
 /* Carbon Ads */

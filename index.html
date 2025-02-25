@@ -62,8 +62,8 @@
 
             <h2>Check SubDomain Availability</h2>
             <div class="search-cntnr">
-                <input id="search-domain" type="text" onkeyup="check()" placeholder="Check domain name e.g. william">
-            <div id="search-btn" class="search-btn" onclick="check()">
+                <input id="search-domain" type="text" placeholder="Check domain name e.g. william">
+            <div id="search-btn" class="search-tip">
                 Check
             </div>
             </div>
@@ -82,6 +82,7 @@
                 </div>
                 <p id="result-none" class="hidden">Nice! The subdomain is still available, <a href="https://docs.is-a.dev">read more here</a> to register the subdomain!</p>
                 <p id="result-error" class="hidden">An Error Occurred while checking the subdomain, please try again...</p>
+                <p id="result-reserved" class="hidden">Unfortunately, this domain you are searching is reserved by the developer for development purposes...</p>
             </div>
 
             <h2>Important Links</h2>
@@ -114,10 +115,14 @@
         </main>
         <script>
             let is_searching=false;
+            let timer_search=undefined;
+            let reserved_domain=undefined;
+            const search_domain=document.getElementById('search-domain');
             // result containers
             const result_card=document.getElementById('result-card');
             const result_none=document.getElementById('result-none');
             const result_error=document.getElementById('result-error');
+            const result_reserved=document.getElementById('result-reserved');
             // user propagate
             const user_avatar=document.getElementById('user-avatar');
             const user_gh_link=document.getElementById('user-gh-link');
@@ -126,7 +131,12 @@
             const user_info=document.getElementById('user-info');
             
             function check(){
-                var search=document.getElementById('search-domain').value.trim().replace(' ','-').toLowerCase()
+                var search=search_domain.value.trim().replace(' ','-').toLowerCase();
+                if(its_reserved(search)){
+                    hide_results();
+                    result_reserved.classList.toggle('hidden');
+                    return;
+                }
                 if(search ==='' || is_searching) return;
                 is_searching=true;
                 fetch('https://raw.githubusercontent.com/is-a-dev/register/main/domains/'+search+'.json')
@@ -146,11 +156,11 @@
                     else if (result_none.classList.contains('hidden')) 
                         result_none.classList.toggle('hidden');
                 })
-                .catch(()=>{
+                .catch((reason)=>{
                     if (result_error.classList.contains('hidden')) result_error.classList.toggle('hidden');
                 }).finally(()=>{
                     is_searching=false;
-                })
+                });
             }
 
             function propagate_result(data){
@@ -169,7 +179,56 @@
                 if (!result_card.classList.contains('hidden')) result_card.classList.toggle('hidden');
                 if (!result_none.classList.contains('hidden')) result_none.classList.toggle('hidden');
                 if (!result_error.classList.contains('hidden')) result_error.classList.toggle('hidden');
+                if (!result_reserved.classList.contains('hidden')) result_reserved.classList.toggle('hidden');
             }
+
+            function its_reserved(domain){
+                var s= reserved_domain.filter(function(pattern) {
+                        if(pattern.includes('['))
+                            return new RegExp(pattern).test(domain);
+                        else
+                            return domain===pattern;
+                        });
+                return s.length > 0;
+            }
+
+            function fetch_reserve(){
+                if(reserved_domain === undefined){
+                    if (timer_search!==undefined)
+                        clearInterval(timer_search);
+                    fetch('https://raw.githubusercontent.com/is-a-dev/register/main/util/reserved.json')
+                    .then(response => {
+                        if(!response.ok)
+                            throw new Error('Something went wrong');
+                        return response.json();
+                    })
+                    .then(data => {
+                        reserved_domain=data;
+                        timer_search=setTimeout(()=>check(this.value),300);
+                    })
+                    .catch((reason)=>{
+                        
+                    });
+                    return;
+                }
+            }
+
+            search_domain.addEventListener('input', function (evt) {
+                if(this.value===''){
+                    if (timer_search!==undefined){
+                        clearInterval(timer_search);
+                    }
+                    hide_results();
+                    return;
+                }
+
+                if (timer_search!==undefined)
+                    clearInterval(timer_search);
+
+                timer_search=setTimeout(()=>check(this.value),300);
+            });
+
+            fetch_reserve();
         </script>
     </body>
 </html>
