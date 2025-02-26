@@ -60,6 +60,31 @@
                 src="//cdn.carbonads.com/carbon.js?serve=CW7DE2JU&placement=is-adev&format=cover"
                 id="_carbonads_js"></script>
 
+            <h2>Check SubDomain Availability</h2>
+            <div class="search-cntnr">
+                <input id="search-domain" disabled type="text" placeholder="loading reserved domain...">
+            <div id="search-keyword" class="search-keyword">
+                *Please refresh the page if the domain checker is not yet available, Thank You...
+            </div>
+            </div>
+            <div>
+                <div id="result-card" class="hidden result-card">
+                        <div class="user-infos">
+                            <img id="user-avatar" class="user-avatar" alt="user-avatar" src="http://github.com/wdhdev.png?size=64">
+                            <div style="display:flex;flex-direction:column;width:100%">
+                                <a id="user-gh-link" target="_blank" href="htttps://github.com/wdhdev">
+                                    <h2 id="user-name" style="line-height:1rem">William</h2>
+                                </a>
+                                <a id="user-website-link" target="_blank" href="https://william.is-a.dev" style="margin-top:-1.3rem;font-size:1rem">william.is-a.dev</a>
+                            </div>
+                        </div>
+                        <p id="user-info">Simple Website</p>
+                </div>
+                <p id="result-none" class="hidden">Nice! The subdomain is still available, <a alt="register-docs" target="_blank" href="https://docs.is-a.dev">read more here</a> on how to register this subdomain!</p>
+                <p id="result-error" class="hidden">An Error Occurred while checking the subdomain, please try again...</p>
+                <p id="result-reserved" class="hidden">Unfortunately, this domain you are searching is reserved by the developer for development purposes, <a alt="reserved-domain" target="_blank" href="https://github.com/is-a-dev/register/tree/main/util/reserved.json"> visit here </a>to see the list of reserved domain</p>
+            </div>
+
             <h2>Important Links</h2>
             <ul>
                 <li><a href="https://docs.is-a.dev">Documentation</a></li>
@@ -88,5 +113,7 @@
                 A project by <a href="https://wdh.gg">William Harrison</a>.
             </p>
         </main>
+        <script src="./scripts/main.js">
+        </script>
     </body>
 </html>
