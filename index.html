@@ -62,27 +62,27 @@
 
             <h2>Check SubDomain Availability</h2>
             <div class="search-cntnr">
-                <input id="search-domain" type="text" placeholder="e.g. william">
-            <div id="search-btn" class="search-tip">
-                Check
+                <input id="search-domain" disabled type="text" placeholder="loading reserved domain...">
+            <div id="search-keyword" class="search-keyword">
+                *Please refresh the page if the domain checker is not yet available, Thank You...
             </div>
             </div>
-            <div class="search-result-cntnr">
+            <div>
                 <div id="result-card" class="hiddens result-card">
                         <div class="user-infos">
                             <img id="user-avatar" class="user-avatar" alt="user-avatar" src="http://github.com/wdhdev.png?size=64">
                             <div style="display:flex;flex-direction:column;width:100%">
-                                <a id="user-gh-link" href="htttps://github.com/wdhdev">
+                                <a id="user-gh-link" target="_blank" href="htttps://github.com/wdhdev">
                                     <h2 id="user-name" style="line-height:1rem">William</h2>
                                 </a>
-                                <a id="user-website-link" href="https://william.is-a.dev" style="margin-top:-1.3rem;font-size:1rem">william.is-a.dev</a>
+                                <a id="user-website-link" target="_blank" href="https://william.is-a.dev" style="margin-top:-1.3rem;font-size:1rem">william.is-a.dev</a>
                             </div>
                         </div>
                         <p id="user-info">Simple Website</p>
                 </div>
-                <p id="result-none" class="hidden">Nice! The subdomain is still available, <a href="https://docs.is-a.dev">read more here</a> to register the subdomain!</p>
+                <p id="result-none" class="hidden">Nice! The subdomain is still available, <a alt="register-docs" target="_blank" href="https://docs.is-a.dev">read more here</a> on how to register this subdomain!</p>
                 <p id="result-error" class="hidden">An Error Occurred while checking the subdomain, please try again...</p>
-                <p id="result-reserved" class="hidden">Unfortunately, this domain you are searching is reserved by the developer for development purposes...</p>
+                <p id="result-reserved" class="hidden">Unfortunately, this domain you are searching is reserved by the developer for development purposes, <a alt="reserved-domain" target="_blank" href="https://github.com/is-a-dev/register/tree/main/util/reserved.json"> visit here </a>to see the list of reserved domain</p>
             </div>
 
             <h2>Important Links</h2>
@@ -115,6 +115,7 @@
         </main>
         <script>
             let is_searching=false;
+            let pattern_domain='^[a-zA-Z0-9_][a-zA-Z0-9.-]*';
             let timer_search=undefined;
             let reserved_domain=undefined;
             const search_domain=document.getElementById('search-domain');
@@ -167,7 +168,7 @@
                 if (result_card.classList.contains('hidden')) result_card.classList.toggle('hidden');
                 var gh_link='https://github.com/'+data.owner.username;
                 var website_link=data.search+'.is-a.dev';
-                user_avatar.src=gh_link+'.png?size=64';
+                user_avatar.src=gh_link+'.png?size=120';
                 user_gh_link.href=gh_link;
                 user_name.innerHTML=data.owner.username;
                 user_website_link.href='https://'+website_link;
@@ -204,10 +205,13 @@
                     })
                     .then(data => {
                         reserved_domain=data;
-                        timer_search=setTimeout(()=>check(this.value),300);
+                        search_domain.disabled=false;
+                        search_domain.placeholder='e.g. william';
+                        document.getElementById('search-keyword').innerHTML='*Start typing to check the subdomain availability,<a alt="filname-convention" target="_blank" href="https://docs.is-a.dev/domain-structure/#filename">check here</a> to learn how to create a proper domain name.';
+                        
                     })
                     .catch((reason)=>{
-                        
+                        // silence is the best
                     });
                     return;
                 }
@@ -221,11 +225,12 @@
                     hide_results();
                     return;
                 }
-
+                search_domain.value=new RegExp(pattern_domain).exec(this.value);
+                console.log(this.value)
                 if (timer_search!==undefined)
                     clearInterval(timer_search);
 
-                timer_search=setTimeout(()=>check(this.value),300);
+                timer_search=setTimeout(()=>check(this.value),1000);
             });
 
             fetch_reserve();
