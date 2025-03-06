@@ -60,6 +60,23 @@
                 src="//cdn.carbonads.com/carbon.js?serve=CW7DE2JU&placement=is-adev&format=cover"
                 id="_carbonads_js"></script>
 
+            <h2>Check Subdomain Availability</h2>
+            <div class="search-cntnr">
+                <input id="search-domain" disabled type="text">
+            </div>
+            <div>
+                <div id="result-card" class="hidden result-card">
+                        <div class="user-infos">
+                            <img id="user-avatar" class="user-avatar" alt="user-avatar" href="https://github.com/github.png?size=64" draggable="false">
+                            <span>This subdomain is owned by <a id="user-gh" target="_blank"><span id="user-gh-name" class="font-semibold"></span></a>.</span>
+                        </div>
+                </div>
+
+                <p id="result-none" class="hidden">That subdomain is available, <a alt="register-docs" target="_blank" href="https://docs.is-a.dev">click here</a> to learn how to register it!</p>
+                <p id="result-error" class="hidden">An error occurred whilst processing your request, please try again.</p>
+                <p id="result-reserved" class="hidden">Unfortunately the subdomain you have searched for is reserved, please try a different subdomain.</p>
+            </div>
+
             <h2>Important Links</h2>
             <ul>
                 <li><a href="https://docs.is-a.dev">Documentation</a></li>
@@ -88,5 +105,7 @@
                 A project by <a href="https://wdh.gg">William Harrison</a>.
             </p>
         </main>
+
+        <script src="scripts/subdomain-availability.js"></script>
     </body>
 </html>
