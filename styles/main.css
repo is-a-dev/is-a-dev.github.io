@@ -208,3 +208,13 @@ input::placeholder {
 #carbonads .carbon-poweredby {
     color: #ffffff;
 }
+
+/* Selection */
+::-moz-selection {
+    color: #fff;
+    background: var(--accent);
+}
+::selection {
+    color: #fff;
+    background: var(--accent);
+}
