@@ -221,6 +221,7 @@ input::placeholder {
             opacity: 0.8;
             scale: 0.8;
             translate: 10% 10%;
+            -webkit-translate: 10% 10%;
             text-decoration: underline;
             text-decoration-color: #5f39d396;
             :hover {
