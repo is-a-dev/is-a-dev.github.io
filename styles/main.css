@@ -208,3 +208,31 @@ input::placeholder {
 #carbonads .carbon-poweredby {
     color: #ffffff;
 }
+
+/* List of all subdomains link (all.is-a.dev) */
+@media(min-width: 716px) {
+    main h2:first-of-type  {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        small {
+            opacity: 0.8;
+            scale: 0.8;
+            translate: 10%;
+            text-decoration: underline;
+            text-decoration-color: #5f39d396;
+            :hover {
+                filter: drop-shadow(0px 0px 5px #5f39d396);
+                -webkit-filter: drop-shadow(0px 0px 5px #5f39d396);
+                padding: 0px;
+            }
+        }
+    }
+}
+@media(max-width: 716px) {
+    main h2:first-of-type small {
+        display: none;
+    }
+}
