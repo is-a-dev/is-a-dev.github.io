@@ -5,9 +5,3 @@ body {
     margin: auto;
     padding: 45px;
 }
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #0d1117;
-    }
-}
