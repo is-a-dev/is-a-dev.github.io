@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- HTML Meta Tags -->
+        <title>Taken Domain | is-a.dev</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" href="styles/secondary.css" />
+        <link rel="stylesheet" href="https://cdn.hrsn.net/is-a-dev/website/fonts/Roboto/font.css" rel="prefetch" />
+        <link rel="stylesheet" href="https://cdn.hrsn.net/is-a-dev/website/fonts/UbuntuMono/font.css" rel="prefetch" />
+    </head>
+
+    <body>
+        <h1>Available Domain</h1>
+        <p>The subdomain <span id="subdomainName"></span>.is-a.dev is available for registration, completely for free! </p>
+        <a href="/">Return to the homepage to learn more about registering is-a.dev subdomains.</a>
+
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const subdomain = params.get("subdomain");
+            if (subdomain) {
+            const el = document.getElementById("subdomainName");
+            if (el) { el.textContent = subdomain; }
+            }
+        </script>
+    </body>
+</html>
