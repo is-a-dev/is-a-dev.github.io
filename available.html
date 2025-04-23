@@ -19,15 +19,17 @@
 
     <body>
         <h1>Available Domain</h1>
-        <p>The subdomain <span id="subdomainName"></span>.is-a.dev is available for registration, completely for free! </p>
+        <p>The subdomain <span id="subdomain"></span>.is-a.dev is available for registration, completely for free!</p>
         <a href="/">Return to the homepage to learn more about registering is-a.dev subdomains.</a>
 
         <script>
             const params = new URLSearchParams(window.location.search);
-            const subdomain = params.get("subdomain");
+            const subdomain = params.get("d");
             if (subdomain) {
-            const el = document.getElementById("subdomainName");
-            if (el) { el.textContent = subdomain; }
+                const el = document.getElementById("subdomain");
+                if (el) el.textContent = subdomain;
+            } else {
+                window.location = "https://is-a.dev";
             }
         </script>
     </body>
