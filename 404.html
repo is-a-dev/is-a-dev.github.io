@@ -28,7 +28,7 @@
 
         if (path.startsWith("/docs/")) {
             const target = "https://docs.is-a.dev" + path.replace(/^\/docs/, '') + search + hash;
-            window.location.replace(target);
+            window.location = target;
         }
     </script>
 </html>
