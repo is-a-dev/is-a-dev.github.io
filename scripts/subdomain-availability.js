@@ -19,7 +19,7 @@ async function fetchReservedDomains() {
             if (!response.ok) throw new Error(`Failed to fetch reserved domains: ${response.statusText}`);
             reservedDomains = await response.json();
             searchDomain.disabled = false;
-            searchDomain.placeholder = "e.g. william";
+            searchDomain.placeholder = "e.g. john";
         }
     } catch (error) {
         console.error(error.message);
