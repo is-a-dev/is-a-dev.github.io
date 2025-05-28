@@ -1,6 +1,0 @@
-Contact: mailto:security@is-a.dev
-Contact: mailto:security@hrsn.net
-Expires: 2026-01-01T16:00:00.000Z
-Preferred-Languages: en
-Canonical: https://is-a.dev/.well-known/security.txt
-Policy: https://github.com/is-a-dev/register/blob/main/SECURITY.md
