@@ -15,9 +15,11 @@ const userGitHubName = document.getElementById("user-gh-name");
 async function fetchReservedDomains() {
     try {
         if (!reservedDomains) {
-            const response = await fetch("https://raw.githubusercontent.com/is-a-dev/register/main/util/reserved.json");
-            if (!response.ok) throw new Error(`Failed to fetch reserved domains: ${response.statusText}`);
-            reservedDomains = await response.json();
+            const res1 = await fetch("https://raw.githubusercontent.com/is-a-dev/register/main/util/reserved.json");
+            if (!res1.ok) throw new Error(`Failed to fetch reserved domains: ${res1.statusText}`);
+            const res2 = await fetch("https://raw.githubusercontent.com/is-a-dev/register/main/util/internal.json");
+            if (!res2.ok) throw new Error(`Failed to fetch internal domains: ${res2.statusText}`);
+            reservedDomains = [...await res1.json(), ...await res2.json()];
             searchDomain.disabled = false;
             searchDomain.placeholder = "e.g. john";
         }
