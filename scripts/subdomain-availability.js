@@ -17,11 +17,22 @@ async function fetchReservedDomains() {
         if (!reservedDomains) {
             const res1 = await fetch("https://raw.githubusercontent.com/is-a-dev/register/main/util/reserved.json");
             if (!res1.ok) throw new Error(`Failed to fetch reserved domains: ${res1.statusText}`);
+
             const res2 = await fetch("https://raw.githubusercontent.com/is-a-dev/register/main/util/internal.json");
             if (!res2.ok) throw new Error(`Failed to fetch internal domains: ${res2.statusText}`);
+
             reservedDomains = [...await res1.json(), ...await res2.json()];
             searchDomain.disabled = false;
-            searchDomain.placeholder = "e.g. john";
+
+            const params = new URLSearchParams(window.location.search);
+            const subdomain = params.get("d");
+
+            if (subdomain) {
+                searchDomain.placeholder = `e.g. ${subdomain}`;
+            } else {
+                searchDomain.placeholder = "e.g. william";
+            }
+            
         }
     } catch (error) {
         console.error(error.message);
