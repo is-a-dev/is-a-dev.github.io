@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- HTML Meta Tags -->
         <title>Thanks | is-a.dev</title>
         <meta name="description" content="A thank you page dedicated to our supporters." />
         <meta name="theme-color" content="#4E3AA3" />
@@ -26,63 +25,140 @@
         <meta name="twitter:title" content="is-a.dev" />
         <meta name="twitter:description" content="A thank you page dedicated to our supporters." />
         <meta name="twitter:image" content="https://is-a.dev/assets/logo.png" />
+        <style>
+            .supporters {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+                list-style: none;
+                padding: 0;
+                margin: 2rem 0;
+            }
 
         <!-- Apple Meta Tags -->
         <meta name="apple-mobile-web-app-title" content="is-a.dev" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+            .supporter {
+                background: #4e3aa366;
+                border-radius: 12px;
+                padding: 1rem;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.2s;
+            }
 
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+            .supporter a {
+                font-weight: bold;
+                color: #fff;
+                text-decoration: none;
+            }
+            
+            .supporter a::after {
+                content: '↗';
+                font-size: 0.8em;
+                margin-left: 0.5em;
+            }
 
         <!-- Stylesheets -->
         <link rel="stylesheet" href="/styles/main.css" />
         <link rel="stylesheet" href="/styles/secondary.css" />
         <link rel="stylesheet" href="https://cdn.hrsn.net/is-a-dev/website/fonts/Roboto/font.css" rel="prefetch" />
         <link rel="stylesheet" href="https://cdn.hrsn.net/is-a-dev/website/fonts/UbuntuMono/font.css" rel="prefetch" />
+            /* If no link is provided, use the 'p' element */
+            .supporter p {
+                font-weight: bold;
+                color: #fff;
+                text-decoration: none;
+            }
+
+            .role {
+                margin-top: 0.5rem;
+                font-size: 0.9rem;
+                color: #999;
+            }
+        </style>
     </head>
 
     <body>
         <h1>Our Supporters</h1>
-        <p>We would like to extend thanks to the following <i>amazing</i> individuals for their generous support and contributions to is-a.dev:</p>
+        <p>We would like to extend thanks to the following <i>amazing</i> individuals for their generous support and
+            contributions to is-a.dev:</p>
 
-        <ul>
-            <li><a href="https://github.com/omsenjalia">Om Senjalia</a></li>
-                <ul><li>Retired Maintainer</li></ul>
-            <li><a href="https://lungustefan.com/">Lungu Stefan-Gabriel</a></li>
-                <ul><li>💖 Donator</li></ul>
-            <li><a href="https://devmatei.com">devmatei</a></li>
-                <ul><li>💖 Donated $4</li></ul>
-            <li><a href="https://orangc.net">orangc</a></li>
-                <ul><li>Maintainer</li></ul>
-            <li><a href="https://github.com/Satindar31">Satindar31</a></li>
-                <ul><li>Contributor</li></ul>
-            <li><a href="https://github.com/OfficialSmojo17">Smojo</a></li>
-                <ul><li>💖 Donated A$4.66</li></ul>
-            <li><a href="https://justdeveloper.is-a.dev/">JustDeveloper</a></li>
-                <ul><li>Former is-a.dev helper</li></ul>
-            <li><a href="https://github.com/imm0nv1nhtv">imm0nv1nhtv</a></li>
-                <ul><li>💖 Donator</li></ul>
-            <li><a href="https://sticknologic.is-a.dev/">STICKnoLOGIC</a></li>
-                <ul><li>Maintainer</li></ul>
-            <li><a href="https://raphael.abi-saad.fr/">Raphaël</a></li>
-                <ul><li>Translator of the is-a.dev docs (retired role)</li></ul>
-            <li><a href="https://github.com/virtualWinter">vWinter</a></li>
-                <ul><li>💖 Donated A$16.02</li></ul>
-            <li><a href="https://github.com/harys722">- HARYs -</a></li>
-                <ul><li>Docs Contributor</li></ul>
-            <li><a href="https://esb.is-a.dev/">EducatedSuddenBucket</a></li>
-                <ul><li>Contributor</li></ul>
-            <li><a href="https://miyuki-yue.dev/">Miyuki Yue</a></li>
-                <ul><li>💖 Donator</li></ul>
-            <li><a href="https://skyexplorewt.xyz/">SkyExploreWT</a></li>
-                <ul><li>Translator of the is-a.dev docs (retired role)</li></ul>
-            <li><a href="https://joe50097.is-a.dev/">Joe</a></li>
-                <ul><li>💖 Donated $7</li></ul>
-            <li><a href="https://shakil.is-a.dev/">Shakil Islam</a></li>
-                <ul><li>💖 Donated $5</li></ul>
-            <li><a href="https://satr14.my.id/">satr14</a></li>
-                <ul><li>Maintainer</li></ul>
+        <ul class="supporters">
+            <li class="supporter">
+                <a href="https://github.com/omsenjalia">Om Senjalia</a>
+                <div class="role">Retired Maintainer</div>
+            </li>
+            <li class="supporter">
+                <a href="https://lungustefan.com/">Lungu Stefan-Gabriel</a>
+                <div class="role">💖 Donator</div>
+            </li>
+            <li class="supporter">
+                <a href="https://devmatei.com">devmatei</a>
+                <div class="role">💖 Donated $4</div>
+            </li>
+            <li class="supporter">
+                <a href="https://orangc.net">orangc</a>
+                <div class="role">Maintainer</div>
+            </li>
+            <li class="supporter">
+                <a href="https://github.com/Satindar31">Satindar31</a>
+                <div class="role">Contributor</div>
+            </li>
+            <li class="supporter">
+                <a href="https://github.com/OfficialSmojo17">Smojo</a>
+                <div class="role">💖 Donated A$4.66</div>
+            </li>
+            <li class="supporter">
+                <a href="https://justdeveloper.is-a.dev/">JustDeveloper</a>
+                <div class="role">Former is-a.dev helper</div>
+            </li>
+            <li class="supporter">
+                <a href="https://github.com/imm0nv1nhtv">imm0nv1nhtv</a>
+                <div class="role">💖 Donator</div>
+            </li>
+            <li class="supporter">
+                <a href="https://sticknologic.is-a.dev/">STICKnoLOGIC</a>
+                <div class="role">Maintainer</div>
+            </li>
+            <li class="supporter">
+                <a href="https://raphael.abi-saad.fr/">Raphaël</a>
+                <div class="role">Translator of the is-a.dev docs (retired role)</div>
+            </li>
+            <li class="supporter">
+                <a href="https://github.com/virtualWinter">vWinter</a>
+                <div class="role">💖 Donated A$16.02</div>
+            </li>
+            <li class="supporter">
+                <a href="https://github.com/harys722">- HARYs -</a>
+                <div class="role">Docs Contributor</div>
+            </li>
+            <li class="supporter">
+                <a href="https://esb.is-a.dev/">EducatedSuddenBucket</a>
+                <div class="role">Contributor</div>
+            </li>
+            <li class="supporter">
+                <a href="https://miyuki-yue.dev/">Miyuki Yue</a>
+                <div class="role">💖 Donator</div>
+            </li>
+            <li class="supporter">
+                <a href="https://skyexplorewt.xyz/">SkyExploreWT</a>
+                <div class="role">Translator of the is-a.dev docs (retired role)</div>
+            </li>
+            <li class="supporter">
+                <a href="https://joe50097.is-a.dev/">Joe</a>
+                <div class="role">💖 Donated $7</div>
+            </li>
+            <li class="supporter">
+                <a href="https://shakil.is-a.dev/">Shakil Islam</a>
+                <div class="role">💖 Donated $5</div>
+            </li>
+            <li class="supporter">
+                <a href="https://satr14.my.id/">satr14</a>
+                <div class="role">Maintainer</div>
+            </li>
         </ul>
     </body>
 </html>
