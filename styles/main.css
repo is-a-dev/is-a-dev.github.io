@@ -1,7 +1,7 @@
 html,
 body {
     --header-bg: linear-gradient(90deg, #1a1331, var(--hover-bg));
-    --accent: #7041ff;
+    --accent: #8453e5;
     --body-fg: #d1c4ff;
     --hover-bg: #4e3aa3;
     --hover-accent: #9b7dff;
